@@ -1,7 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { CarouselImage } from '../models/Carrousel';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { CarouselImage } from '../models/Carrousel';
 
 @Component({
   selector: 'app-carrousel',

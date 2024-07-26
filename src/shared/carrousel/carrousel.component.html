@@ -6,11 +6,7 @@
       opacity: hidden ? 0 : 1,
       transition: 'opacity ' + animationSpeed + 'ms ease-in-out',
     }"
-  >
-    <div class="slide-content">
-      <h2 class="description">{{ images[selectedIndex].title }}</h2>
-    </div>
-  </div>
+  ></div>
 
   @if (showIndicator) {
     <button class="indicators">
@@ -25,15 +21,17 @@
   }
   @if (showNavigators) {
     <button
-      class="btn-primary btn-style mx-10px btn-previous"
+      class="btn-primary"
+      style="left: 0"
       (click)="previous()"
       aria-label="Previous"
     >
       <mat-icon class="ml-5px">arrow_back_ios</mat-icon>
     </button>
     <button
-      class="btn-primary btn-style mx-10px btn-next"
+      class="btn-primary"
       (click)="next()"
+      style="right: 0"
       aria-label="Next"
     >
       <mat-icon>arrow_forward_ios</mat-icon>
