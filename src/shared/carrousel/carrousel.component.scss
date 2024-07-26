@@ -5,35 +5,30 @@
   width: 100%;
 }
 .slides {
-  width: 390px;
-  height: 276px;
-  overflow: hidden;
+  width: 100%;
+  height: 650px;
   position: relative;
-  margin: auto;
-  > h1 {
-    margin: 0;
-    font-size: $font-size-h2;
-    color: $color-primary;
-    text-align: center;
-  }
+
   .slide {
-    width: 265px;
-    height: 150px; /* Altura ajustada para corresponder à imagem */
-    background: cover, center, no-repeat;
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     transition: opacity 0.2s ease-in;
-    margin: auto;
-    top: 5%;
   }
 }
 .btn-primary {
   position: absolute;
+  top: 50%;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .indicators {
-  margin-top: 60px; /* Espaço entre o carrossel e os indicadores */
+  margin-top: 30px;
   width: 100%;
-  text-align: center; /* Centraliza os indicadores */
+  text-align: center;
   .indicator {
     width: 12px;
     height: 12px;
