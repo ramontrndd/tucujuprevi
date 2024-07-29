@@ -2,10 +2,18 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CarrouselComponent } from 'src/shared/carrousel/carrousel.component';
 
+import { HeaderComponent } from './components/header/header.component';
+import { LatestNewsComponent } from './components/latest-news/latest-news.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CarrouselComponent],
+  imports: [
+    RouterOutlet,
+    CarrouselComponent,
+    HeaderComponent,
+    LatestNewsComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

@@ -1,0 +1,33 @@
+@import 'src/scss/_global.scss';
+mat-toolbar {
+  display: flex;
+  flex-direction: row;
+  background-color: $color-button-primary-bg;
+}
+mat-toolbar-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  background-color: $color-button-primary-bg;
+}
+button {
+  text-transform: uppercase;
+}
+.img-header {
+  position: relative;
+  width: 100%;
+}
+.btn-wpp {
+  > img {
+    width: 75px;
+    height: 75px;
+  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ajuste o z-index conforme necessário */
+  border: none;
+  cursor: pointer;
+  background-color: $color-button-secondary-bg;
+}
