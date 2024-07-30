@@ -4,6 +4,7 @@ import { CarrouselComponent } from 'src/shared/carrousel/carrousel.component';
 
 import { HeaderComponent } from './components/header/header.component';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
+import { CardsComponent } from 'src/shared/cards/cards.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
     CarrouselComponent,
     HeaderComponent,
     LatestNewsComponent,
+    CardsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,0 +1,17 @@
+@import 'src/scss/_global.scss';
+mat-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > h2 {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 0.9;
+  }
+  margin: 10px;
+  background-color: $color-button-primary-bg;
+}
+.card-container {
+  width: 200px;
+  height: 200px;
+}

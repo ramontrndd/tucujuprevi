@@ -1,1 +1,10 @@
 @import 'src/scss/_global.scss';
+
+.content-inss {
+  margin: auto;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
