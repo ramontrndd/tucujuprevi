@@ -10,6 +10,11 @@ article {
   box-sizing: border-box;
   position: relative; /* Para conter os elementos filhos com position: absolute */
 }
+.btn-nav {
+  > button {
+    color: white;
+  }
+}
 .logo-container {
   display: flex;
   align-items: center;
