@@ -1,4 +1,88 @@
 <app-header></app-header>
-<app-mini-cards [text]="'Auxílio Saúde'"> </app-mini-cards>
+<app-card-icons
+  [title]="'Direito Previdenciário'"
+  [image]="'previdenciario.png'"
+></app-card-icons>
+<div class="services">
+  <app-cards
+    [title]="'ATUAÇÃO ADMINISTRATIVA JUNTO À PREVIDÊNCIA SOCIAL'"
+    [contentList]="[
+      'Análise contributiva.',
+      'Planejamento',
+      'Previdenciário.',
+      'Requerimento de benefícios previdenciários.',
+      'Justificação administrativa para prova de tempo de serviço.',
+      'Pedidos de Revisão de Benefícios.',
+      'Requerimento de Certidão de Tempo de Serviço.',
+      'Recursos administrativos.',
+    ]"
+  >
+  </app-cards>
+  <app-cards
+    [title]="'ATUAÇÃO JUDICIAL CONTRA A PREVIDÊNCIA SOCIAL'"
+    [contentList]="[
+      'Aposentadoria por tempo de serviço.',
+      'Aposentadoria por idade.',
+      'Aposentadoria por invalidez.',
+      'Aposentadoria especial.',
+      'Revisão de valor dos benefícios.',
+      'Salário-maternidade.',
+      'Auxílio-doença.',
+      'Auxílio-acidente.',
+      'Auxílio-reclusão.',
+      'Justificação judicial.',
+      'Indenização por acidente de trabalho.',
+    ]"
+  >
+  </app-cards>
+  <app-cards
+    [title]="'ATUAÇÃO NA ÁREA DE PREVIDÊNCIA PRIVADA COMPLEMENTAR'"
+    [contentList]="[
+      'Consultoria às entidades patrocinadoras e participantes de fundos de pensão.',
+      'Elaboração de estudos e pareceres.',
+      'Acompanhamento de ações judiciais.',
+    ]"
+  >
+  </app-cards>
+</div>
+<app-card-icons
+  [title]="'Direito Trabalhista'"
+  [image]="'trabalhista.png'"
+></app-card-icons>
+<div class="services">
+  <app-cards
+    [title]="'NO PATROCÍNIO DE AÇÕES PARA EMPREGADOS'"
+    [contentList]="[
+      'Reconhecimento de vínculo de emprego.',
+      'Pagamento de rescisão contratual, salários, décimo terceiro e férias.',
+      'FGTS e multa de 40%.',
+      'Equiparação salarial e/ou equivalência salarial.',
+      'Indenizações e diferenças por alterações lesivas das condições do contrato de trabalho.',
+      'Desvio de função.',
+      'Acúmulo de função.',
+      'Reintegração ao emprego (gestantes, cipeiros, acidentados etc.).',
+      'Indenizações por doenças e acidentes do trabalho.',
+      'Danos morais por assédio moral, sexual ou tratamento indigno.',
+    ]"
+  >
+  </app-cards>
+  <app-cards
+    [title]="'SERVIÇOS REALIZADOS EXCLUSIVO PARA OS TRABALHADORES'"
+    [contentList]="[
+      'Trabalho sem carteira assinada.',
+      'Cooperativas fraudulentas.',
+      'Jornadas de trabalho abusivas.',
+      'Terceirizações ilegais.',
+      'Aplicação da “justa causa” de forma indevida.',
+      'Estágios fraudulentos.',
+      'Pedidos de demissão forçados.',
+      'Horas extras não pagas.',
+      'Fraudes na marcação do cartão de ponto ou da folha de presença.',
+      'Condições de trabalho prejudiciais à saúde e segurança do trabalhador (insalubridade e periculosidade).',
+      'Pagamentos por fora do contracheque.',
+    ]"
+  >
+  </app-cards>
+</div>
 
 <router-outlet />

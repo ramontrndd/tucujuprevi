@@ -10,35 +10,14 @@ article {
   box-sizing: border-box;
   position: relative; /* Para conter os elementos filhos com position: absolute */
 }
-
 .logo-container {
   display: flex;
   align-items: center;
 }
-
 .logo {
   width: 50px;
   height: 40px;
 }
-
-.btn-nav {
-  display: flex;
-  gap: 10px;
-
-  button {
-    color: white;
-    background-color: transparent;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    &:hover {
-      background-color: $color-button-secondary-border;
-    }
-  }
-}
-
 .main-image {
   position: relative;
   display: flex;
@@ -62,11 +41,9 @@ article {
   position: absolute; /* Para posicionar o texto sobre a imagem */
   top: 30%; /* Alinhar verticalmente ao centro */
   left: 5%;
-
   text-align: center;
   color: $color-bg-cards;
 }
-
 .overlay {
   background-color: rgba(
     0,
@@ -96,28 +73,29 @@ article {
 }
 
 .whatsapp-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   background-color: #29a719;
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   font-size: 16px;
+  font-weight: bold;
+  margin: 10px 5px;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  margin-top: 50px;
 
   &:hover {
     background-color: #248b17;
   }
 
   img {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     margin-left: 10px;
   }
 
