@@ -5,7 +5,6 @@
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
 }
-
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -13,49 +12,44 @@
   max-width: 1300px;
   margin: 0 auto;
 }
-
 .main {
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 20px;
 }
-
 .main p {
   @include body-l-style;
   text-align: justify;
   line-height: 1.5;
 }
-
 .main h2 {
   @include headline-2-style;
   color: $color-primary;
   line-height: 1.5;
 }
-
 .main-image {
   width: 100%;
   height: 400px;
 }
-
 .side {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   align-items: start;
 }
-
-.side section {
-  display: flex;
-  flex-direction: column;
-}
-
 .side h3 {
-  font-size: $font-size-h3;
+  font-size: $font-size-body-l;
   font-weight: $font-weight-bold;
   color: $color-primary;
+  line-height: 1.5;
 }
-
+.side p {
+  @include body-l-style;
+  text-align: justify;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
 .side-image {
-  width: 100%;
-  height: auto;
+  width: 390px;
+  height: 150px;
 }

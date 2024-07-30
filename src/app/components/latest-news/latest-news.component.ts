@@ -13,31 +13,38 @@ export class LatestNewsComponent {
   mainNews: NewsItem = {
     imageUrl: 'noticia-principal.png',
     altText: 'principal noticia',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title:
+      'Pente-fino do INSS: Atualize seus dados e evite o cancelamento do seu benefício; saiba como',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet purus gravida quis blandit. Id volutpat lacus laoreet non curabitur. Nunc scelerisque viverra mauris in aliquam sem fringilla. Cursus vitae congue mauris rhoncus aenean. Ornare lectus sit amet est placerat. Tortor at risus viverra adipiscing at in tellus integer.',
+    href: '/noticia/1',
   };
   sideNews: NewsItem[] = [
     {
-      imageUrl: 'noticia-lateral.png',
-      altText: 'noticia lateral',
-      title: 'Lorem ipsum dolor sit amet',
+      title: 'Juiz estadual nega vínculo de emprego entre motorista e a Uber',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'A juíza Clarissa Rodrigues Alves, da 12ª Vara Cível de São Paulo, negou o pedido de vínculo empregatício de um motorista contra a Uber.',
+      imageUrl: 'uber-vinculo.jpg',
+      altText: 'noticia lateral',
+      href: '',
     },
     {
-      imageUrl: 'noticia-lateral.png',
-      altText: 'noticia lateral',
-      title: 'Lorem ipsum dolor sit amet',
+      title:
+        'Beneficiários do BPC serão recadastrados e regras se tornarão mais rígidas.',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'O governo federal pretende recadastrar os beneficiários do BPC no mês de setembro e reavaliar as condições de quem o recebe.',
+      imageUrl: 'previdencia.jpg',
+      altText: 'noticia lateral',
+      href: '',
     },
     {
-      imageUrl: 'noticia-lateral.png',
-      altText: 'noticia lateral',
-      title: 'Lorem ipsum dolor sit amet',
+      title:
+        'Governo lança programa de passagens a R$ 200 para aposentados do INSS',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Com atraso, o governo federal lançou nesta quarta a primeira fase do Voa Brasil, programa de passagens a R$ 200 para aposentados do INSS.',
+      imageUrl: 'avião.jpg',
+      altText: 'noticia lateral',
+      href: '',
     },
   ];
 }

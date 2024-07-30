@@ -3,4 +3,5 @@ export interface NewsItem {
   altText: string;
   title: string;
   content: string;
+  href: string;
 }

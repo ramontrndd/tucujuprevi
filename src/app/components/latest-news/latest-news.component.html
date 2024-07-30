@@ -5,10 +5,12 @@
       [alt]="mainNews.altText"
       class="main-image"
     />
-    <h2>{{ mainNews.title }}</h2>
-    <p>{{ mainNews.content }}</p>
-  </article>
 
+    <section>
+      <h2>{{ mainNews.title }}</h2>
+      <p>{{ mainNews.content }}</p>
+    </section>
+  </article>
   <aside class="side">
     @for (news of sideNews; track $index) {
       <section>
