@@ -1,14 +1,93 @@
 @import 'src/scss/_global.scss';
-main {
+article {
+  position: absolute;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items: start;
+  justify-content: space-between;
 }
 .logo {
   width: 50px;
   height: 40px;
   margin: 10px 10px;
 }
+.content {
+  > ul h1 {
+    @include headline-1-style;
+    color: $color-bg-cards;
+  }
+  > ul li {
+    width: 600px;
+    @include headline-3-style;
+    color: $color-bg-cards;
+    margin-left: 50px;
+  }
+  position: relative;
+  top: 30%;
+}
+
+.main-image {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(230deg, #9b7e6000, #000000),
+    url('public/main-image.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 0;
+  min-height: 100vh;
+}
+
+.btn-nav {
+  > button {
+    color: white;
+  }
+  background-color: $color-secondary;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 10px;
+  &:hover {
+    background-color: $color-button-secondary-border;
+  }
+}
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #29a719;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.whatsapp-button:hover {
+  background-color: #248b17;
+}
+
+.whatsapp-button img {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
+
+.whatsapp-button button {
+  all: unset; /* Remove os estilos padrão do botão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .btn-float {
   > img {
     width: 75px;
