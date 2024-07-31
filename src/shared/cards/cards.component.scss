@@ -4,14 +4,17 @@
   height: 550px;
   max-width: 400px;
   margin: 30px auto;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.336);
   overflow: hidden; /* Garante que o conteúdo não vaze para fora */
+  border-radius: 1px;
 
   mat-card-header {
     background-color: #f5f5f5; /* Ajuste conforme o design */
     border-bottom: 2px solid #dcdcdc; /* Linha decorativa */
     padding: 16px; /* Espaçamento interno */
     mat-card-title {
+      text-align: center;
+
       line-height: 1rem;
       font-size: 0.75rem;
       font-weight: bold;

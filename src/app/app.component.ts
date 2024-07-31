@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 import { CardsComponent } from 'src/shared/cards/cards.component';
 import { CardIconsComponent } from 'src/shared/card-icons/card-icons.component';
+import { CardExplainComponent } from 'src/shared/card-explain/card-explain.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { CardIconsComponent } from 'src/shared/card-icons/card-icons.component';
     LatestNewsComponent,
     CardsComponent,
     CardIconsComponent,
+    CardExplainComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

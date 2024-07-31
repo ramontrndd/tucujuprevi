@@ -1,0 +1,35 @@
+mat-card {
+  background-color: #fff;
+  width: 250px;
+  height: 300px;
+  transition: all 0.2s ease-in-out;
+  > section h4 {
+    letter-spacing: 1.5px;
+    margin: 0 auto;
+    width: 200px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+  }
+  > section p {
+    margin: 0 auto;
+    width: 200px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 300;
+    text-align: center;
+  }
+  margin: 10px auto;
+  border-radius: 1px;
+}
+.icon-box {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+}
+mat-card:hover {
+  transform: translateY(-10px);
+}
