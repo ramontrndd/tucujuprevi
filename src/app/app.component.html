@@ -1,7 +1,13 @@
 <app-header></app-header>
 <div class="section-title">
-  <h2>Descubra como podemos assegurar os seus direitos previdenciários</h2>
+  <h2 class="dprev">
+    Descubra como podemos assegurar os seus direitos previdenciários
+  </h2>
 </div>
+<app-card-icons
+  [title]="'Direito Previdenciário'"
+  [image]="'previdenciario.png'"
+></app-card-icons>
 <div class="card-explain">
   <app-card-explain
     [title]="'PLANEJAMENTO PREVIDENCIÁRIO E CÁLCULOS PARA APOSENTADORIA'"
@@ -60,10 +66,7 @@
     "
   ></app-card-explain>
 </div>
-<app-card-icons
-  [title]="'Direito Previdenciário'"
-  [image]="'previdenciario.png'"
-></app-card-icons>
+
 <div class="services">
   <app-cards
     [title]="'ATUAÇÃO ADMINISTRATIVA JUNTO À PREVIDÊNCIA SOCIAL'"

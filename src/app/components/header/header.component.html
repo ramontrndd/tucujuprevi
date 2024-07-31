@@ -4,8 +4,9 @@
   </section>
   <section class="btn-nav">
     <button mat-button routerLink="/home">Início</button>
-    <button mat-button routerLink="/about">Direito Previdenciário</button>
-    <button mat-button routerLink="/about">Direito Trabalhista</button>
+    <button mat-button routerLink="/about" (click)="scrollToSection()">
+      Direito Previdenciário
+    </button>
     <button mat-button routerLink="/contact">Quem Somos</button>
   </section>
 </article>

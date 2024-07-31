@@ -13,7 +13,13 @@ article {
 .btn-nav {
   > button {
     color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
+}
+.btn-nav button:hover {
+  background-color: $color-button-primary-bg;
+  border-radius: 1px;
 }
 .logo-container {
   display: flex;
