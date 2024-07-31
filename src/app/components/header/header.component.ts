@@ -21,4 +21,7 @@ export class HeaderComponent {
   scrollToAbout() {
     this.scrollService.scrollToSection('about');
   }
+  scrollToContact() {
+    this.scrollService.scrollToSection('contact');
+  }
 }

@@ -1,1 +1,58 @@
-<p>contact works!</p>
+<div class="container">
+  <mat-card class="info">
+    <mat-card-content>
+      <mat-icon>location_on</mat-icon>
+      <section
+        class="contact-item"
+        (click)="
+          openLink(
+            'https://www.google.com/maps/search/?api=1&query=Av.%20Pedro%20Baião,%201720%20-%20Santa%20Rita,%20Macapá%20-%20AP,%2068900-116'
+          )
+        "
+      >
+        <h6>Escritório</h6>
+        <p>Av. Pedro Baião, 1720 - Santa Rita, Macapá - AP, 68900-116</p>
+      </section>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-icon>email</mat-icon>
+      <section
+        class="contact-item"
+        (click)="openLink('mailto:previtucuju@gmail.com')"
+      >
+        <h6>Email</h6>
+        <p>previtucuju&#64;gmail.com</p>
+      </section>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-icon>phone</mat-icon>
+      <section class="contact-item" (click)="openLink('tel:+5596984118827')">
+        <h6>Telefone</h6>
+        <p>(96) 98411-8827</p>
+      </section>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="info">
+    <iframe
+      title="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.817751158613!2d-51.07224142400151!3d0.030604664393351817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d61e1b69325cd89%3A0x1059c592a7ad4764!2sDiego%20William%20Advogados%20Associados!5e0!3m2!1spt-BR!2sbr!4v1722435077275!5m2!1spt-BR!2sbr"
+      width="450"
+      height="450"
+      style="border: 0; margin: auto; display: block; padding: 10px"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </mat-card>
+</div>
+<a
+  class="whatsapp-button"
+  href="https://wa.me/seu_numero_de_telefone/?text=Quero%20falar%20com%20um%20especialista"
+  target="_blank"
+>
+  <button>
+    Quero falar com um especialista
+    <img src="whatsapp2.png" class="whatsapp-icon" alt="WhatsApp Logo" />
+  </button>
+</a>

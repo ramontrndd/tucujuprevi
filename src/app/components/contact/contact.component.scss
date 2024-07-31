@@ -1,0 +1,132 @@
+@import 'src/scss/_global.scss';
+
+.mat-mdc-card {
+  margin: 10px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+mat-card {
+  border-radius: 1px;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  align-items: baseline;
+}
+.info {
+  border-top: 3px solid $color-secondary;
+  border-bottom: 3px solid $color-secondary;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+.info mat-icon {
+  padding: 20px;
+  background-color: $color-secondary;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: all 0.9s;
+}
+.info i {
+  padding: 20px;
+  background-color: $color-secondary;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: all 0.9s;
+}
+.social-meida {
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.social-media i {
+  margin: 3px;
+  padding: 16px;
+  background-color: $color-secondary;
+  color: white;
+  font-size: 1rem;
+  border-radius: 50%;
+  transition: all 0.9s;
+}
+.info mat-card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.info mat-card-content h6 {
+  color: $color-secondary;
+  margin-top: 10px;
+  line-height: 0.5;
+  font-weight: $font-weight-bold;
+}
+.info mat-card-content p {
+  margin: 0;
+  color: $color-button-primary-text;
+  font-weight: $font-weight-regular;
+}
+.info section {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+.info mat-icon:hover {
+  background-color: darken($color-secondary, 10%);
+}
+.info mat-card-content:hover {
+  transform: translateX(10px);
+}
+
+.whatsapp-button {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding-bottom: 150px;
+}
+.whatsapp-button button {
+  display: flex;
+  align-items: center;
+  background-color: $color-button-primary-text;
+  color: white;
+  border: none;
+  border-radius: 1px;
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button button:hover {
+  background-color: $color-button-secondary-border;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.whatsapp-button button:hover .whatsapp-icon {
+  transform: scale(2.1);
+}
+
+mat-card-content section {
+  cursor: pointer;
+}
