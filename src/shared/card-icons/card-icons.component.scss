@@ -3,9 +3,8 @@ section {
   > h2 {
     text-align: center;
     color: $color-button-primary-text;
-    font-size: 1.5rem;
     margin: 5px 0;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   > img {
     display: flex;
@@ -23,7 +22,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;

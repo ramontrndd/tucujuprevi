@@ -4,9 +4,10 @@ import { CardExplainComponent } from 'src/shared/card-explain/card-explain.compo
 import { CardIconsComponent } from 'src/shared/card-icons/card-icons.component';
 import { CardsComponent } from 'src/shared/cards/cards.component';
 import { CarrouselComponent } from 'src/shared/carrousel/carrousel.component';
-import { HeaderComponent } from './components/header/header.component';
+
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
