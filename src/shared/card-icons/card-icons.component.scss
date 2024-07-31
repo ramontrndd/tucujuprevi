@@ -25,20 +25,9 @@ section {
   font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+
   position: relative;
   color: $color-button-primary-text;
-}
-.card-explain {
-  margin: 0 auto;
-  width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 20px;
-  flex-wrap: wrap;
 }
 .section-title h2::before {
   content: '';

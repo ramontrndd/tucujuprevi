@@ -9,12 +9,15 @@
   text-align: center;
 }
 
+.section-title p {
+  font-weight: $font-weight-regular;
+  font-size: $font-size-h3;
+  color: $color-secondary;
+}
 .section-title h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
   position: relative;
   color: $color-button-primary-text;
 }

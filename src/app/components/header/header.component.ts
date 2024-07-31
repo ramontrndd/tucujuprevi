@@ -15,7 +15,10 @@ import { ScrollBehaviorService } from '@app/services/scroll-behavior.service';
 export class HeaderComponent {
   private scrollService = inject(ScrollBehaviorService);
 
-  scrollToSection() {
+  scrollToPrev() {
     this.scrollService.scrollToSection('dprev');
+  }
+  scrollToAbout() {
+    this.scrollService.scrollToSection('about');
   }
 }

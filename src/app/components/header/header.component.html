@@ -3,11 +3,9 @@
     <img src="INSS.png" class="logo" alt="" />
   </section>
   <section class="btn-nav">
-    <button mat-button routerLink="/home">Início</button>
-    <button mat-button routerLink="/about" (click)="scrollToSection()">
-      Direito Previdenciário
-    </button>
-    <button mat-button routerLink="/contact">Quem Somos</button>
+    <button mat-button (click)="scrollToPrev()">Direito Previdenciário</button>
+    <button mat-button (click)="scrollToAbout()">Quem Somos</button>
+    <button mat-button>Contato</button>
   </section>
 </article>
 <section class="content">

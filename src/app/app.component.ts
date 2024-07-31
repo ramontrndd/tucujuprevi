@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CarrouselComponent } from 'src/shared/carrousel/carrousel.component';
-
-import { HeaderComponent } from './components/header/header.component';
-import { LatestNewsComponent } from './components/latest-news/latest-news.component';
-import { CardsComponent } from 'src/shared/cards/cards.component';
-import { CardIconsComponent } from 'src/shared/card-icons/card-icons.component';
 import { CardExplainComponent } from 'src/shared/card-explain/card-explain.component';
+import { CardIconsComponent } from 'src/shared/card-icons/card-icons.component';
+import { CardsComponent } from 'src/shared/cards/cards.component';
+import { CarrouselComponent } from 'src/shared/carrousel/carrousel.component';
+import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './components/about/about.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +14,7 @@ import { CardExplainComponent } from 'src/shared/card-explain/card-explain.compo
     RouterOutlet,
     CarrouselComponent,
     HeaderComponent,
-    LatestNewsComponent,
+    AboutComponent,
     CardsComponent,
     CardIconsComponent,
     CardExplainComponent,
