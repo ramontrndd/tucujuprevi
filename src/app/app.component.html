@@ -126,4 +126,10 @@
   [image]="'contate-nos.png'"
 ></app-card-icons>
 <app-contact></app-contact>
+
+@if (isVisible) {
+  <button class="back-to-top" (click)="scrollToTop()">
+    <mat-icon>keyboard_double_arrow_up</mat-icon>
+  </button>
+}
 <router-outlet />
