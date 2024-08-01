@@ -12,107 +12,21 @@
   [image]="'previdenciario.png'"
 ></app-card-icons>
 <div class="card-explain">
-  <app-card-explain
-    [title]="'PLANEJAMENTO PREVIDENCIÁRIO E CÁLCULOS PARA APOSENTADORIA'"
-    [icon]="'calculo-aposentadoria.png'"
-    [description]="
-      'Facilitamos o seu futuro. Com um planejamento estratégico para a previdência, sua aposentadoria será mais segura e tranquila.'
-    "
-  ></app-card-explain>
-  <app-card-explain
-    [title]="'APOSENTADORIA'"
-    [icon]="'aposentadoria.png'"
-    [description]="
-      'Trabalhou toda a vida; agora, merece descansar. Facilitamos o processo para que você curta plenamente esta nova etapa.'
-    "
-  ></app-card-explain>
-  <app-card-explain
-    [title]="'PLANEJAMENTO PREVIDENCIÁRIO E CÁLCULOS PARA APOSENTADORIA'"
-    [icon]="'revisao-aposentadoria.png'"
-    [description]="
-      'Recebe menos do que deveria? Analisamos seu caso e defendemos seus direitos para garantir benefícios justos.'
-    "
-  ></app-card-explain>
-  <app-card-explain
-    [title]="'BCP/LOAS'"
-    [icon]="'bcp-loas.png'"
-    [description]="
-      'Dificuldades financeiras? Podemos ajudar você a acessar o BPC/LOAS, garantindo um salário mínimo.'
-    "
-  ></app-card-explain>
-  <app-card-explain
-    [title]="'APOSENTADORIA POR INVALIDEZ'"
-    [icon]="'aposentadoria-por-invalidez.png'"
-    [description]="
-      'Se acidentes interromperam sua carreira, nós auxiliamos a garantir seu sustento por meio da aposentadoria por invalidez.'
-    "
-  ></app-card-explain>
-  <app-card-explain
-    [title]="'AUXÍLIO DOENÇA'"
-    [icon]="'auxilio-doenca.png'"
-    [description]="
-      'Doenças são inesperadas, mas o apoio não. Asseguramos o auxílio-doença para amparar você em tempos difíceis.'
-    "
-  ></app-card-explain>
-  <app-card-explain
-    [title]="'AUXÍLIO ACIDENTE'"
-    [icon]="'auxilio-acidente.png'"
-    [description]="
-      'Se um acidente reduziu sua capacidade de trabalho, você pode ter direito ao Auxílio-Acidente. Estamos aqui para ajudar.'
-    "
-  ></app-card-explain>
-  <app-card-explain
-    [title]="'APOSENTADORIA ESPECIAL'"
-    [icon]="'aposentadoria-especial.png'"
-    [description]="
-      'Trabalhou em condições adversas? Lutamos pelo benefício que reconhece seus anos de dedicação em ambientes rigorosos.'
-    "
-  ></app-card-explain>
+  @for (card of cardsExplain; track $index) {
+    <app-card-explain
+      title="{{ card.title }}"
+      icon="{{ card.icon }}"
+      description="{{ card.description }}
+      "
+    ></app-card-explain>
+  }
 </div>
-
 <div class="services">
-  <app-cards
-    [title]="'ATUAÇÃO ADMINISTRATIVA JUNTO À PREVIDÊNCIA SOCIAL'"
-    [contentList]="[
-      'Análise contributiva.',
-      'Planejamento',
-      'Previdenciário.',
-      'Requerimento de benefícios previdenciários.',
-      'Justificação administrativa para prova de tempo de serviço.',
-      'Pedidos de Revisão de Benefícios.',
-      'Requerimento de Certidão de Tempo de Serviço.',
-      'Recursos administrativos.',
-    ]"
-  >
-  </app-cards>
-  <app-cards
-    [title]="'ATUAÇÃO JUDICIAL CONTRA A PREVIDÊNCIA SOCIAL'"
-    [contentList]="[
-      'Aposentadoria por tempo de serviço.',
-      'Aposentadoria por idade.',
-      'Aposentadoria por invalidez.',
-      'Aposentadoria especial.',
-      'Revisão de valor dos benefícios.',
-      'Salário-maternidade.',
-      'Auxílio-doença.',
-      'Auxílio-acidente.',
-      'Auxílio-reclusão.',
-      'Justificação judicial.',
-      'Indenização por acidente de trabalho.',
-    ]"
-  >
-  </app-cards>
-  <app-cards
-    [title]="'ATUAÇÃO NA ÁREA DE PREVIDÊNCIA PRIVADA COMPLEMENTAR'"
-    [contentList]="[
-      'Consultoria às entidades patrocinadoras e participantes de fundos de pensão.',
-      'Elaboração de estudos e pareceres.',
-      'Acompanhamento de ações judiciais.',
-    ]"
-  >
-  </app-cards>
+  @for (card of cards; track $index) {
+    <app-cards title="{{ card.title }}" [contentList]="card.contentList">
+    </app-cards>
+  }
 </div>
-
 <app-card-icons
   class="about"
   [title]="'Quem Somos'"
@@ -126,7 +40,6 @@
   [image]="'contate-nos.png'"
 ></app-card-icons>
 <app-contact></app-contact>
-
 @if (isVisible) {
   <button class="back-to-top" (click)="scrollToTop()">
     <mat-icon>keyboard_double_arrow_up</mat-icon>
