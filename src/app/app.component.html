@@ -22,6 +22,7 @@
   }
 </div>
 <!-- ==================================== carrousel ==================================== -->
+
 @for (card of cardsExplain; track card; let i = $index) {
   @if (selectedIndex === i) {
     <app-carrousel
@@ -31,6 +32,7 @@
       [autoPlay]="true"
       [autoPlayInterval]="3000"
       [(selectedIndex)]="selectedIndex"
+      class="carrousel-cards"
     >
       <app-card-explain
         title="{{ card.title }}"
@@ -44,29 +46,30 @@
 
 <!-- ==================================== carrousel ==================================== -->
 
-<!-- <div class="services">
+<div class="services">
   @for (card of cards; track $index) {
     <app-cards title="{{ card.title }}" [contentList]="card.contentList">
     </app-cards>
   }
 </div>
-<app-card-icons
+<!-- <app-card-icons
   class="about"
   [title]="'Quem Somos'"
   [image]="'gestao.png'"
 ></app-card-icons>
-<app-about></app-about>
+<app-about></app-about> -->
 
-<app-card-icons
+<!-- <app-card-icons
   class="contact"
   [title]="'Entre em contato.'"
   [image]="'contate-nos.png'"
 ></app-card-icons>
-<app-contact></app-contact>
+<app-contact></app-contact> -->
+
 @if (isVisible) {
   <button class="back-to-top" (click)="scrollToTop()">
     <mat-icon>keyboard_double_arrow_up</mat-icon>
   </button>
-} -->
+}
 
 <router-outlet />

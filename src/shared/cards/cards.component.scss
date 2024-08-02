@@ -35,3 +35,28 @@
     }
   }
 }
+@media screen and (min-width: 344px) and (max-width: 375px) {
+  .custom-card {
+    height: 500px;
+    max-width: 300px;
+    margin: 30px auto;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 728px) {
+  .custom-card {
+    height: 500px;
+    max-width: 350px;
+    margin: 30px auto;
+  }
+}
+@media screen and (min-width: 729px) and (max-width: 1080px) {
+  .custom-card {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+}
