@@ -2,19 +2,26 @@
   <div
     class="slide"
     [ngStyle]="{
-      'background-image': 'url(' + images[selectedIndex].imageSrc + ')',
       opacity: hidden ? 0 : 1,
       transition: 'opacity ' + animationSpeed + 'ms ease-in-out',
     }"
-  ></div>
+  >
+    @if (cards.length > 0) {
+      @for (card of cards; track card; let i = $index) {
+        @if (selectedIndex === i) {
+          <ng-content select="[carrousel-item]"></ng-content>
+        }
+      }
+    }
+  </div>
 
   @if (showIndicator) {
     <button class="indicators">
-      @for (image of images; track $index) {
+      @for (card of cards; track card; let i = $index) {
         <button
-          (click)="jumpToSlide($index)"
+          (click)="jumpToSlide(selectedIndex)"
           class="indicator"
-          [ngClass]="{ active: selectedIndex === $index }"
+          [ngClass]="{ active: selectedIndex === i }"
         ></button>
       }
     </button>

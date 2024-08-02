@@ -1,23 +1,35 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+
+import { CardExplainComponent } from '../card-explain/card-explain.component';
+import { Cards } from '../models/Cards';
 import { CarouselImage } from '../models/Carrousel';
 
 @Component({
   selector: 'app-carrousel',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIconModule, CardExplainComponent],
   templateUrl: './carrousel.component.html',
   styleUrl: './carrousel.component.scss',
 })
 export class CarrouselComponent implements OnInit {
   @Input() images: CarouselImage[] = [];
+  @Input() cards: Cards[] = [];
   @Input() showIndicator = true;
   @Input() showNavigators = true;
   @Input() animationSpeed = 1000;
   @Input() autoPlay = false;
   @Input() autoPlayInterval = 3000;
-  selectedIndex = 0;
+  @Input() selectedIndex = 0;
+  @Output() selectedIndexChange = new EventEmitter<number>();
   hidden = false;
 
   ngOnInit(): void {
@@ -29,26 +41,23 @@ export class CarrouselComponent implements OnInit {
   }
 
   next() {
-    const selectedIndex = (this.selectedIndex + 1) % this.images.length;
+    const selectedIndex = (this.selectedIndex + 1) % this.cards.length;
     this.jumpToSlide(selectedIndex);
   }
+
   previous() {
     const selectedIndex =
-      (this.selectedIndex - 1 + this.images.length) % this.images.length;
+      (this.selectedIndex - 1 + this.cards.length) % this.cards.length;
     this.jumpToSlide(selectedIndex);
   }
+
   jumpToSlide(index: number) {
     this.hidden = true;
     setTimeout(() => {
       this.selectedIndex = index;
+      this.selectedIndexChange.emit(this.selectedIndex);
       this.hidden = false;
     }, this.animationSpeed);
-  }
-
-  handleKeyEnter(event: KeyboardEvent): void {
-    if (event.key === 'Enter') {
-      window.location.href = this.images[this.selectedIndex].href;
-    }
   }
 
   @HostListener('document:keyup', ['$event'])
@@ -57,16 +66,16 @@ export class CarrouselComponent implements OnInit {
       this.next();
     }
   }
+
   @HostListener('document:keydown', ['$event'])
-  OnKeyDown(event: KeyboardEvent): void {
+  onKeyDown(event: KeyboardEvent): void {
     if (event.key === 'ArrowLeft') {
       this.previous();
     }
   }
-  @HostListener('document:keypress', ['$event'])
-  onKeyPress(event: KeyboardEvent): void {
+  handleKeyEnter(event: KeyboardEvent): void {
     if (event.key === 'Enter') {
-      this.handleKeyEnter(event);
+      window.location.href = this.images[this.selectedIndex].href;
     }
   }
 }

@@ -30,6 +30,7 @@ import { MatIconModule } from '@angular/material/icon';
 export class AppComponent {
   title = 'tucujuprevi';
   isVisible = false;
+  selectedIndex: number = 0;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
