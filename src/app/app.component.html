@@ -21,7 +21,30 @@
     ></app-card-explain>
   }
 </div>
-<div class="services">
+<!-- ==================================== carrousel ==================================== -->
+@for (card of cardsExplain; track card; let i = $index) {
+  @if (selectedIndex === i) {
+    <app-carrousel
+      [cards]="cardsExplain"
+      [showIndicator]="true"
+      [showNavigators]="true"
+      [autoPlay]="true"
+      [autoPlayInterval]="3000"
+      [(selectedIndex)]="selectedIndex"
+    >
+      <app-card-explain
+        title="{{ card.title }}"
+        icon="{{ card.icon }}"
+        description="{{ card.description }}"
+        carrousel-item
+      ></app-card-explain>
+    </app-carrousel>
+  }
+}
+
+<!-- ==================================== carrousel ==================================== -->
+
+<!-- <div class="services">
   @for (card of cards; track $index) {
     <app-cards title="{{ card.title }}" [contentList]="card.contentList">
     </app-cards>
@@ -44,25 +67,6 @@
   <button class="back-to-top" (click)="scrollToTop()">
     <mat-icon>keyboard_double_arrow_up</mat-icon>
   </button>
-}
-<!-- ==================================== carrousel ==================================== -->
-<!-- @for (card of cardsExplain; track card; let i = $index) {
-  @if (selectedIndex === i) {
-    <app-carrousel
-      [cards]="cardsExplain"
-      [showIndicator]="true"
-      [showNavigators]="true"
-      [(selectedIndex)]="selectedIndex"
-    >
-      <app-card-explain
-        title="{{ card.title }}"
-        icon="{{ card.icon }}"
-        description="{{ card.description }}"
-        carrousel-item
-      ></app-card-explain>
-    </app-carrousel>
-  }
 } -->
 
-<!-- ==================================== carrousel ==================================== -->
 <router-outlet />

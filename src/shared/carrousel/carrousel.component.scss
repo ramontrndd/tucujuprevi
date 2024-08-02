@@ -48,3 +48,9 @@ button {
   border: none;
   background: none;
 }
+
+@media screen and (min-width: 344px) and (max-width: 375px) {
+  .btn-primary {
+    padding: 5px;
+  }
+}
