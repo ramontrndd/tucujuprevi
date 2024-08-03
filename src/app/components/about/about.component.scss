@@ -1,17 +1,21 @@
 @import 'src/scss/_global.scss';
 
 mat-card {
-  height: 600px;
-  padding-top: 50px;
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
+  height: auto;
+  max-width: 1200px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.425);
   border-radius: 1px;
 }
 mat-card-content p {
   margin: 0 auto;
   text-align: justify;
-  width: 1000px;
+
   font-weight: $font-weight-regular;
   font-size: $font-size-h3;
   color: $color-secondary;
@@ -58,4 +62,23 @@ mat-card-content p {
 
 .whatsapp-button button:hover .whatsapp-icon {
   transform: scale(2.1);
+}
+
+@media screen and (min-width: 344px) and (max-width: 375px) {
+  mat-card {
+    margin: 30px;
+  }
+  mat-card-content p {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 728px) {
+  mat-card {
+    margin: 30px;
+  }
+  mat-card-content p {
+    padding: 10px;
+    font-size: 1rem;
+  }
 }

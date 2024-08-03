@@ -34,14 +34,16 @@
 .back-to-top {
   position: fixed;
   top: 90%;
-  left: 50%;
-  display: inline-block;
-  padding: 10px 20px;
+  left: 46%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza verticalmente */
+  padding: 20px;
   font-size: 14px;
-  background-color: $color-button-primary-text;
+  background-color: $color-button-primary-text; /* Certifique-se de que $color-button-primary-text está definido */
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -56,10 +58,16 @@
   .section-title p {
     padding: 10px;
   }
+  .back-to-top {
+    left: 45%;
+  }
 }
 @media screen and (min-width: 376px) and (max-width: 728px) {
   .card-explain {
     display: none;
+  }
+  .back-to-top {
+    left: 45%;
   }
 }
 @media screen and (min-width: 729px) and (max-width: 2560px) {
