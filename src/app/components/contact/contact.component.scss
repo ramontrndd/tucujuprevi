@@ -26,7 +26,6 @@ mat-card {
   padding: 20px;
   background-color: $color-secondary;
   color: white;
-  font-size: 1.5rem;
   border-radius: 50%;
   transition: all 0.9s;
 }
@@ -71,13 +70,7 @@ mat-card {
   color: $color-button-primary-text;
   font-weight: $font-weight-regular;
 }
-.info section {
-  margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  justify-content: flex-start;
-}
+
 .info mat-icon:hover {
   background-color: darken($color-secondary, 10%);
 }
@@ -129,4 +122,54 @@ mat-card {
 
 mat-card-content section {
   cursor: pointer;
+  margin-left: 20px;
+}
+@media screen and (min-width: 344px) and (max-width: 375px) {
+  .container {
+    flex-direction: column;
+  }
+  .info {
+    width: 350px;
+    margin: 15px;
+  }
+  .contact-item p {
+    font-size: 0.85rem;
+  }
+  .social-media i {
+    font-size: 1rem;
+  }
+  .info mat-card-content {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  mat-card-content section {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 728px) {
+  .container {
+    flex-direction: column;
+  }
+  .info {
+    width: 350px;
+    margin: 15px;
+  }
+  .info mat-card-content {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  mat-card-content section {
+    text-align: center;
+    margin-top: 10px;
+  }
+  mat-card-content mat-icon {
+    margin: 5px auto;
+  }
 }

@@ -21,7 +21,6 @@
     ></app-card-explain>
   }
 </div>
-<!-- ==================================== carrousel ==================================== -->
 
 @for (card of cardsExplain; track card; let i = $index) {
   @if (selectedIndex === i) {
@@ -42,8 +41,6 @@
   }
 }
 
-<!-- ==================================== carrousel ==================================== -->
-
 <div class="services">
   @for (card of cards; track $index) {
     <app-cards title="{{ card.title }}" [contentList]="card.contentList">
@@ -57,12 +54,12 @@
 ></app-card-icons>
 <app-about></app-about>
 
-<!-- <app-card-icons
+<app-card-icons
   class="contact"
   [title]="'Entre em contato.'"
   [image]="'contate-nos.png'"
 ></app-card-icons>
-<app-contact></app-contact> -->
+<app-contact></app-contact>
 
 @if (isVisible) {
   <button class="back-to-top" (click)="scrollToTop()">
