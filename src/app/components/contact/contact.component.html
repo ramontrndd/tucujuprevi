@@ -1,33 +1,29 @@
 <div class="container">
   <mat-card class="info">
-    <mat-card-content>
+    <mat-card-content
+      (click)="
+        openLink(
+          'https://www.google.com/maps/search/?api=1&query=Av.%20Pedro%20Baião,%201720%20-%20Santa%20Rita,%20Macapá%20-%20AP,%2068900-116'
+        )
+      "
+    >
       <mat-icon>location_on</mat-icon>
-      <section
-        class="contact-item"
-        (click)="
-          openLink(
-            'https://www.google.com/maps/search/?api=1&query=Av.%20Pedro%20Baião,%201720%20-%20Santa%20Rita,%20Macapá%20-%20AP,%2068900-116'
-          )
-        "
-      >
+      <section class="contact-item">
         <h6>Escritório</h6>
         <p>Av. Pedro Baião, 1720</p>
         <p>Santa Rita, Macapá - AP, 68900-116</p>
       </section>
     </mat-card-content>
-    <mat-card-content>
+    <mat-card-content (click)="openLink('mailto:previtucuju@gmail.com')">
       <mat-icon>email</mat-icon>
-      <section
-        class="contact-item"
-        (click)="openLink('mailto:previtucuju@gmail.com')"
-      >
+      <section class="contact-item">
         <h6>Email</h6>
         <p>previtucuju&#64;gmail.com</p>
       </section>
     </mat-card-content>
-    <mat-card-content>
+    <mat-card-content (click)="openLink('tel:+5596984118827')">
       <mat-icon>phone</mat-icon>
-      <section class="contact-item" (click)="openLink('tel:+5596984118827')">
+      <section class="contact-item">
         <h6>Telefone</h6>
         <p>(96) 98411-8827</p>
       </section>
