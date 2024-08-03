@@ -2,8 +2,14 @@
   <div
     class="slide"
     [ngStyle]="{
+      transform: hidden ? 'translateX(-100%)' : 'translateX(0)',
       opacity: hidden ? 0 : 1,
-      transition: 'opacity ' + animationSpeed + 'ms ease-in-out',
+      transition:
+        'transform ' +
+        animationSpeed +
+        'ms ease-in-out, opacity ' +
+        animationSpeed +
+        'ms ease-in-out',
     }"
   >
     @if (cards.length > 0) {

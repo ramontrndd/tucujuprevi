@@ -4,6 +4,7 @@
   display: block;
   width: 100%;
 }
+
 .slides {
   width: 100%;
   height: auto;
@@ -15,9 +16,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    transition: opacity 0.2s ease-in;
+    transition:
+      transform 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
+    transform: translateX(0); // Initial state
+    opacity: 1; // Initial state
   }
 }
+
 .btn-primary {
   position: absolute;
   top: 30%;
@@ -29,6 +35,7 @@
   margin-top: 30px;
   width: 100%;
   text-align: center;
+
   .indicator {
     width: 12px;
     height: 12px;
@@ -37,12 +44,14 @@
     display: inline-block;
     margin: 0 3px;
     cursor: pointer;
+
     &.active {
       background-color: $color-button-primary-bg;
       transition: 0.5s ease-in-out;
     }
   }
 }
+
 button {
   appearance: none;
   border: none;
@@ -54,6 +63,7 @@ button {
     padding: 5px;
   }
 }
+
 @media screen and (min-width: 376px) and (max-width: 728px) {
   .btn-primary {
     padding: 5px;
