@@ -33,3 +33,18 @@ mat-card {
 mat-card:hover {
   transform: translateY(-10px);
 }
+@media screen and (min-width: 344px) and (max-width: 375px) {
+  mat-card section h4 {
+    font-size: 15px;
+    color: rgb(255, 0, 0);
+  }
+  mat-card img {
+    color: black;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 728px) {
+  mat-card section h4 {
+    font-size: 15px;
+    color: #ff0000;
+  }
+}
