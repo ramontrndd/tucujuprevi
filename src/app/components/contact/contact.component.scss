@@ -21,6 +21,8 @@ mat-card {
   border-bottom: 3px solid $color-secondary;
   background: #fff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px;
 }
 .info mat-icon {
   padding: 20px;
@@ -36,6 +38,9 @@ mat-card {
   font-size: 1.5rem;
   border-radius: 50%;
   transition: all 0.9s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .social-meida {
   width: 1200px;

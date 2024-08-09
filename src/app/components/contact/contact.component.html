@@ -1,11 +1,7 @@
 <div class="container">
   <mat-card class="info">
     <mat-card-content
-      (click)="
-        openLink(
-          'https://www.google.com/maps/search/?api=1&query=Av.%20Pedro%20Baião,%201720%20-%20Santa%20Rita,%20Macapá%20-%20AP,%2068900-116'
-        )
-      "
+      (click)="openLink('https://maps.app.goo.gl/wU3xnTjkF98vXDuS9')"
     >
       <mat-icon>location_on</mat-icon>
       <section class="contact-item">
@@ -30,16 +26,17 @@
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="info">
+  <mat-card
+    class="info"
+    (click)="openLink('https://maps.app.goo.gl/wU3xnTjkF98vXDuS9')"
+  >
     <iframe
       title="map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.817751158613!2d-51.07224142400151!3d0.030604664393351817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d61e1b69325cd89%3A0x1059c592a7ad4764!2sDiego%20William%20Advogados%20Associados!5e0!3m2!1spt-BR!2sbr!4v1722435077275!5m2!1spt-BR!2sbr"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31918.546082027595!2d-51.09996834602336!3d0.009943999357307864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d61e1003fcbd4c5%3A0x2c8758b113c9aadb!2sTucuju%20Previ!5e0!3m2!1spt-BR!2sbr!4v1723211983114!5m2!1spt-BR!2sbr"
+      style="margin: auto; width: 100%"
       width="auto"
-      height="450"
-      style="border: 0; margin: auto; display: block; padding: 10px"
-      allowfullscreen=""
+      height="100%"
       loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
   </mat-card>
 </div>
